@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="393" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="657" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="401" firstAttribute="width" constant="82"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="394" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="695" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="395" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="90" y="651" width="51" height="31"/>
+                                <connections>
+                                    <action selector="SwitchNight_ValueChanged:" destination="BYZ-38-t0r" id="2248" eventType="valueChanged"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="396" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="180" y="652" width="208" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.78431372549019607" green="0" blue="1" alpha="1"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections/>
+                                <constraints>
+                                    <constraint id="614" firstAttribute="width" secondItem="396" secondAttribute="height" multiplier="104:15"/>
+                                    <constraint id="619" firstAttribute="width" constant="208"/>
+                                </constraints>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="397" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="90" y="690" width="308" height="31"/>
+                                <constraints>
+                                    <constraint id="626" firstAttribute="width" constant="304"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="SliderSize_ValueChanged:" destination="BYZ-38-t0r" id="2510" eventType="valueChanged"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" lineBreakMode="middleTruncation" id="2766" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="364" y="24" width="22" height="22"/>
+                                <connections>
+                                    <segue id="3434" destination="2754" kind="modal"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="399" firstItem="393" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16"/>
+                            <constraint id="400" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="393" secondAttribute="bottom" constant="58"/>
+                            <constraint id="403" firstItem="395" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="90"/>
+                            <constraint id="404" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="395" secondAttribute="bottom" constant="54"/>
+                            <constraint id="615" firstItem="396" firstAttribute="centerY" secondItem="393" secondAttribute="centerY"/>
+                            <constraint id="618" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="396" secondAttribute="trailing" constant="26"/>
+                            <constraint id="620" firstItem="396" firstAttribute="leading" secondItem="395" secondAttribute="trailing" constant="41"/>
+                            <constraint id="625" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="397" secondAttribute="trailing" constant="18"/>
+                            <constraint id="628" firstItem="397" firstAttribute="centerY" secondItem="394" secondAttribute="centerY"/>
+                            <constraint id="629" firstItem="393" firstAttribute="centerY" secondItem="395" secondAttribute="centerY" constant="1"/>
+                            <constraint id="630" firstItem="393" firstAttribute="centerY" secondItem="395" secondAttribute="centerY" constant="1"/>
+                            <constraint id="864" firstItem="394" firstAttribute="trailing" secondItem="397" secondAttribute="leading" constant="6"/>
+                            <constraint id="865" firstItem="394" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
+                            <constraint id="866" firstItem="394" firstAttribute="top" secondItem="393" secondAttribute="bottom" constant="17"/>
+                            <constraint id="3309" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="2766" secondAttribute="trailing" constant="28"/>
+                            <constraint id="3310" firstItem="2766" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="24"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nightLabel" destination="393" id="name-outlet-393"/>
+                        <outlet property="buttonStart" destination="396" id="name-outlet-396"/>
+                        <outlet property="sliderSize" destination="397" id="name-outlet-397"/>
+                        <outlet property="switchNight" destination="395" id="name-outlet-395"/>
+                        <outlet property="buttonAbout" destination="2766" id="name-outlet-2766"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <scene sceneID="2753">
+            <objects>
+                <viewController id="2754" sceneMemberID="viewController" customClass="AboutViewController" storyboardIdentifier="AboutViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2751"/>
+                        <viewControllerLayoutGuide type="bottom" id="2752"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2755">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2758" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="133" y="35" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2819" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="184" y="667" width="46" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="ButtonClose_TouchUpInside:" destination="2754" id="2825" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="2762" firstItem="2758" firstAttribute="top" secondItem="2751" secondAttribute="bottom" constant="13"/>
+                            <constraint id="2763" firstItem="2758" firstAttribute="centerX" secondItem="2755" secondAttribute="centerX" constant="7"/>
+                            <constraint id="2822" firstItem="2755" firstAttribute="trailing" secondItem="2819" secondAttribute="trailing" constant="184"/>
+                            <constraint id="2823" firstItem="2755" firstAttribute="bottom" secondItem="2819" secondAttribute="bottom" constant="39"/>
+                            <constraint id="2824" firstItem="2819" firstAttribute="centerX" secondItem="2755" secondAttribute="centerX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="2758" id="name-outlet-2758"/>
+                        <outlet property="buttonClose" destination="2819" id="name-outlet-2819"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2756" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="1"/>
+        </scene>
+    </scenes>
+</document>
