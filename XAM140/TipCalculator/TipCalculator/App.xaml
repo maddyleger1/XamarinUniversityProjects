@@ -1,0 +1,19 @@
+<Application
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="TipCalculator.App">
+
+	<Application.Resources>
+		<ResourceDictionary>
+            <Color x:Key="bgColor">#c0c0c</Color>
+            <Color x:Key="fgColor">#606060</Color>
+            <Style x:Key="infoLabelStyle" BasedOn="baseLabelStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />   
+            </Style>
+            <Style x:Key="baseLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="22" />
+            </Style>
+		</ResourceDictionary>
+	</Application.Resources>
+
+</Application>
